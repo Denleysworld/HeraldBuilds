@@ -3,6 +3,9 @@ import Header from './Header';
 import Footer from './Footer';
 import FAQItem from './FAQItem';
 import FAQForm from './FAQForm';
+import './Styles/faq.css';
+import './Styles/global.css';
+
 
 
 const FAQ = () => {
