@@ -1,10 +1,15 @@
 import React from "react";
-import TroubleshootingSection from "../components/TroubleshootingSection";
-import "./styles.css";
+import TroubleshootingSection from "./TroubleshootingSection";
+import "./Styles/styles.css";
+import Header from "./Header";
+import Footer from "./Footer";
+
 
 export default function TroubleshootingPage() {
   return (
+   
     <div>
+      <Header />
       <h1>PC Troubleshooting Guide</h1>
       <p className="subtitle">
         Find solutions to common PC problems or browse categories to get your
@@ -25,6 +30,7 @@ export default function TroubleshootingPage() {
         title="Connectivity Issues"
       />
       <TroubleshootingSection file="audio-video.json" title="Audio and Video" />
+      <Footer/>
     </div>
   );
 }

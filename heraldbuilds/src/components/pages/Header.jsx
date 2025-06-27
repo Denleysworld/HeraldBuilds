@@ -12,7 +12,7 @@ export default function Header() {
         <span>Herald Builds</span>
       </div>
       <nav className="nav-links">
-        <Link to="/home">Home</Link>
+        <Link to="/">Home</Link>
         <Link to="/troubleshooting">Troubleshooting</Link>
         <Link to="/guides">PC Guides</Link>
         <Link to="/about">About Us</Link>

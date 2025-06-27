@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './GuidesPage.css';
+import Header from './Header';
+import Footer from './Footer';
+
 
 const GuidesPage = () => {
   const [guides, setGuides] = useState([]);
@@ -65,6 +67,8 @@ const GuidesPage = () => {
   }, {});
 
   return (
+    <div className="guides-container">
+    <Header />
     <main className="guides-main">
       <section className="guides-header">
         <h1 className="title">PC Building Guides</h1>
@@ -95,7 +99,10 @@ const GuidesPage = () => {
         </section>
       ))}
     </main>
+    <Footer/>
+    </div>
   );
 };
+
 
 export default GuidesPage;

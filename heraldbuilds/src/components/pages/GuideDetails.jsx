@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './GuideDetails.css';
+import './Styles/GuideDetails.css'; // Import your CSS styles for this component
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
 
 const GuideDetails = () => {
   const [guide, setGuide] = useState(null);
@@ -18,7 +20,10 @@ const GuideDetails = () => {
   }
 
   return (
+    <div>
+    <Header />
     <div className="guide-details-container">
+    
       <div className="guide-card">
         <div className={`level-tag ${guide.level.toLowerCase()}`}>{guide.level}</div>
         <h2>{guide.title}</h2>
@@ -59,6 +64,8 @@ const GuideDetails = () => {
           ))}
         </ul>
       </div>
+    </div>
+    <Footer />
     </div>
   );
 };
