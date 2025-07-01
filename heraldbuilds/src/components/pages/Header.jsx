@@ -15,6 +15,7 @@ export default function Header() {
         <Link to="/">Home</Link>
         <Link to="/troubleshooting">Troubleshooting</Link>
         <Link to="/guides">PC Guides</Link>
+        <Link to="/tools">Tools</Link>
         <Link to="/about">About Us</Link>
         <Link to="/faq">FAQ</Link>
       </nav>
