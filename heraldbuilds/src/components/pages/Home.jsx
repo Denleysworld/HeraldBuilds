@@ -8,6 +8,7 @@ import DreamSection from './DreamSection';
 
 
 import './Styles/index.css';
+import Footer from './Footer';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Features />
       <Benefits />
       <Testimonials />
+      <Footer />
     </div>
   );
 }
