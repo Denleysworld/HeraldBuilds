@@ -47,13 +47,13 @@ a {
 .hero h1 {
     font-size: 4rem;
     font-weight: bold;
-    color: #ffffff; /* White text */
+    color: #ffffff; 
      text-shadow: 
         0 0 5px #00bfff,
         0 0 10px #00bfff,
         0 0 20px #00bfff,
         0 0 40px #00bfff,
-        2px 2px 4px rgba(0, 0, 0, 0.8);
+       2px 2px 4px rgba(0, 0, 0, 0.8);
     
     animation: pulse-glow 2s ease-in-out infinite alternate;
 }

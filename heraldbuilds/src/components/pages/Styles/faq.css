@@ -2,24 +2,46 @@
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  padding-top: 0 !important;
 }
 
 .hero {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0 !important;
 }
 
-.hero h1 {
-  font-size: 2.25rem;
-  margin-bottom: 1rem;
-  color: #ffffff;
+
+.faq-page .hero {
+  padding: 0.5rem 0 0.25rem !important;  /* Minimal padding overrides index.css */
+  min-height: auto !important;           /* Remove fixed height from index.css */
+  background: none !important;
+  display: block !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  padding-top: 0 !important;
+}
+
+.faq-page .hero .subtitle {
+  margin-bottom: 0 !important;
+}
+
+.faq-page .hero h1 {
+  font-size: 2.25rem !important;
+  margin-bottom: 0.5rem !important;
+  color: #ffffff !important;
   text-shadow: none !important;
   animation: none !important;
-  white-space: normal;
-  word-break: normal;
-  max-width: 100%;
-  overflow-wrap: anywhere;
+  margin-top: 0 !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  max-width: 100% !important;
+  display: block !important;
+  /* Remove global h1 margin-top */
+  margin-block-start: 0 !important;
+  margin-block-end: 0.5rem !important;
+  
 }
 
 .hero .subtitle {
