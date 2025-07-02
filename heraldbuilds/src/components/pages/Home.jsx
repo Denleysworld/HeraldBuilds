@@ -4,8 +4,10 @@ import Hero from './Hero';
 import Features from './Features';  
 import Benefits from './Benefits';
 import Testimonials from './Testimonials';
+import DreamSection from './DreamSection';
 
-import './Styles/base.css';
+
+import './Styles/index.css';
 
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
+      <DreamSection />
       <Features />
       <Benefits />
       <Testimonials />

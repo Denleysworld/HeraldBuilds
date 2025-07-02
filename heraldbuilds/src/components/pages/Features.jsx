@@ -1,6 +1,5 @@
 import React from 'react';
-import './Styles/Features.css'; 
-import './Styles/base.css';
+
 
 import { Link } from 'react-router-dom';
 
