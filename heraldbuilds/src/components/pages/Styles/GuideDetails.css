@@ -115,22 +115,59 @@ header {
   align-items: center;
   min-height: 70vh;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 100px;
+  max-width: 1200px;
+  padding: 2.5rem 1rem 2.5rem 1rem; 
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.guide-card {
+  background-color: #1c2433;
+  padding: 4rem 4rem 4rem 4.5rem; 
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+
+.back-to-guides-btn {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.18s;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+  align-self: flex-start;
+  margin-left: calc((100% - 900px) / 2); 
 }
 
 .guide-detail-content {
-  background: #202a3c;
-  border-radius: 1.25rem;
-  box-shadow: 0 0 0 3px #1e293b, 0 6px 32px rgba(0,0,0,0.18);
-  padding: 2.2rem 2.8rem 2.5rem 2.8rem;
-  max-width: 1100px;
+  background-color: #1c2433;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 2.5rem 2.5rem 2.5rem 3rem;
+  max-width: 900px;
   width: 100%;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  transition: box-shadow 0.2s, background 0.2s;
 }
 
 .guide-detail-content > * {
@@ -141,42 +178,35 @@ header {
 }
 
 .guide-detail-content h1 {
-  text-align: left;
-  margin-top: 0.5rem;
-  margin-bottom: 0.15rem;
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: 0.01em;
+  font-size: 2.25rem;
+  font-weight: bold;
   color: #fff;
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 .guide-detail-content .subtitle {
-  text-align: left;
+  font-size: 1.125rem;
+  color: rgb(188, 185, 185);
+  margin-bottom: 1rem;
   margin-top: 0;
-  margin-bottom: 0.6rem;
-  color: #bfc9db;
-  font-size: 1.18rem;
-  font-weight: 400;
-  line-height: 1.5;
 }
 
 .video-link {
-  margin: 0 0 1.2rem 0;
+  margin: 0.5rem 0 0 0;
 }
 
 .guide-link {
   display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
   background-color: #3b82f6;
   color: #fff;
   border-radius: 0.5rem;
   text-decoration: none;
-  text-align: center;
-  font-size: 1.08rem;
+  font-size: 0.98rem;
   font-weight: 600;
-  padding: 0.55rem 1.4rem;
-  margin: 0;
-  transition: background 0.18s;
-  box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+  transition: background-color 0.2s;
 }
 
 .guide-link:hover {
@@ -185,11 +215,11 @@ header {
 
 .back-to-guides-btn {
   display: inline-block;
-  margin: 1.2rem 0 0 0;
+  margin-bottom: 1.5rem;
   background-color: #3b82f6;
   color: white;
-  padding: 0.55rem 1.3rem;
-  font-size: 1.02rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.98rem;
   font-weight: 600;
   border: none;
   border-radius: 0.5rem;
@@ -197,6 +227,8 @@ header {
   transition: background 0.18s, transform 0.18s;
   text-align: center;
   box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+  align-self: flex-start; 
+  margin-left: calc((100% - 900px) / 2); 
 }
 
 .back-to-guides-btn:hover {
@@ -234,8 +266,8 @@ header {
   font-weight: 600;
   border: none;
   border-radius: 0.5rem;
-  padding: 0.55rem 1.4rem;
-  font-size: 1.08rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.98rem;
   min-width: 0;
   margin: 1.1rem 0 0 0;
   box-shadow: 0 2px 8px rgba(59,130,246,0.08);
@@ -250,30 +282,37 @@ header {
 }
 
 .guide-header-row {
-  margin-top: 2.5rem;
-  margin-bottom: 0.5rem;
   width: 100%;
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .level-tag {
   display: inline-block;
-  padding: 0.32rem 1.1rem;
-  font-size: 0.85rem;
-  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
   border-radius: 999px;
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #fff;
-  background: #3b82f6;
-  box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+  letter-spacing: 0.5px;
+  color: white;
 }
 
-.level-tag.beginner { background: #22c55e; }
-.level-tag.intermediate { background: #f59e42; }
-.level-tag.advanced { background: #ef4444; }
+.level-tag.beginner {
+  background-color: #28a745;
+}
+
+.level-tag.intermediate {
+  background-color: orange;
+}
+
+.level-tag.advanced {
+  background-color: #dc3545;
+}
 
 /* Remove double numbering for instructions */
 .instructions-wrapper ol {
@@ -304,5 +343,21 @@ header {
     top: 0.5rem;
     padding: 0.3rem 0.8rem;
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .guide-card {
+    max-width: 99vw;
+    padding: 1.5rem;
+  }
+  .guide-detail-page {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .back-to-guides-btn {
+    margin-left: 0;
   }
 }
