@@ -1,16 +1,17 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer>
       <div className="footer-content">
         <div className="footer-section">
           <h3>Quick Links</h3>
-          <a href="/HeraldBuilds/Home/index.html">Home</a>
-          <a href="/HeraldBuilds/Guides/guides.html">PC Guides</a>
-          <a href="/HeraldBuilds/Troubleshooting/troubleshooting.html">
-            Troubleshooting
-          </a>
-          <a href="/HeraldBuilds/About/about.html">About Us</a>
-          <a href="/HeraldBuilds/FAQ/faq.html">FAQ</a>
+          <Link to="/">Home</Link>
+          <Link to="/guides">PC Guides</Link>
+          <Link to="/troubleshooting">Troubleshooting</Link>
+          <Link to="/tools">Tools</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/faq">FAQ</Link>
         </div>
 
         <div className="footer-section">

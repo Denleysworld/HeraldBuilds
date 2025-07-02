@@ -1,5 +1,5 @@
 import React from 'react';
-import dreamPcImage from './images/backgrounds/sdl-sanjaya-4gbbKX63V5I-unsplash (1).webp';
+import dreamPcImage from './images/backgrounds/sdl-sanjaya-hero-bg.webp';
 
 const DreamSection = () => {
   const dreamImageStyle = {
