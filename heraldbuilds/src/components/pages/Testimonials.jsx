@@ -1,6 +1,6 @@
 import React from 'react';
 import './Styles/Testimonials.css'; 
-import './Styles/base.css';
+
 
 const Testimonials = () => {
   return (

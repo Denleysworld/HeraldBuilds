@@ -1,73 +1,115 @@
 import React, { useEffect, useState } from 'react';
-import './Styles/GuideDetails.css'; // Import your CSS styles for this component
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import './Styles/GuideDetails.css';
 
-const GuideDetails = () => {
+function GuideDetails() {
   const [guide, setGuide] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const storedGuide = localStorage.getItem('selectedGuide');
-    if (storedGuide) {
-      setGuide(JSON.parse(storedGuide));
-    }
+    const stored = localStorage.getItem('selectedGuide');
+    if (stored) setGuide(JSON.parse(stored));
   }, []);
 
+  const stripNum = t => t.replace(/^\d+\.\s*/, '');
+
   if (!guide) {
-    return <p style={{ color: 'red' }}>No guide selected.</p>;
+    return (
+      <div className="guides-container">
+        <Header />
+        <main className="guide-detail-page">
+          <p>Guide not found.</p>
+          <button
+            className="back-to-guides-btn"
+            onClick={() => navigate('/')}
+          >
+            Back to Guides
+          </button>
+        </main>
+        <Footer />
+      </div>
+    );
   }
 
   return (
-    <div>
-    <Header />
-    <div className="guide-details-container">
-    
-      <div className="guide-card">
-        <div className={`level-tag ${guide.level.toLowerCase()}`}>{guide.level}</div>
-        <h2>{guide.title}</h2>
-        <p className="guide-summary">{guide.summary}</p>
+    <div className="guides-container">
+      <Header />
+      <main className="guide-detail-page">
+        <div className="guide-detail-content">
+       
 
-        <div className="tag-list">
-          {guide.tags.map((tag, i) => (
-            <span key={i} className="guide-tag">{tag}</span>
-          ))}
+          <div className="guide-header-row">
+            <span className={`level-tag ${guide.level?.toLowerCase()}`}>{guide.level}</span>
+          </div>
+
+          <h1>{guide.title}</h1>
+          <p className="subtitle">{guide.summary}</p>
+
+          {guide.tags && (
+            <div className="tag-list detail">
+              {guide.tags.map((tag, i) => (
+                <span key={i} className="guide-tag">{tag}</span>
+              ))}
+            </div>
+          )}
+        
+          {guide.link && (
+            <p className="video-link">
+              <a
+                href={guide.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="guide-link"
+              >
+                Watch Video
+              </a>
+            </p>
+          )}
+
+          <button
+            className="back-to-guides-btn dark"
+            onClick={() => navigate('/guides')}
+          >
+            ← Back to Guides
+          </button>
+
+          <div className="instructions-wrapper">
+            <h2>Instructions</h2>
+            <ol>
+              {guide.instructions.map((s, i) => (
+                <li key={i}>{stripNum(s)}</li>
+              ))}
+            </ol>
+
+            {guide.recommendedTools?.length > 0 && (
+              <>
+                <h3>Recommended&nbsp;Tools</h3>
+                <ul>
+                  {guide.recommendedTools.map((t, i) => (
+                    <li key={i}>{t}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {guide.whatToLookFor?.length > 0 && (
+              <>
+                <h3>What&nbsp;to&nbsp;Look&nbsp;For</h3>
+                <ul>
+                  {guide.whatToLookFor.map((w, i) => (
+                    <li key={i}>{w}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </div>
         </div>
-
-        <button className="back-btn" onClick={() => navigate(-1)}>
-          ← Back to Guides
-        </button>
-
-        <a href={guide.link} className="guide-link" target="_blank" rel="noopener noreferrer">
-          Watch Video
-        </a>
-
-        <h3>Instructions</h3>
-        <ol className="guide-list">
-          {guide.instructions?.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ol>
-
-        <h3>Recommended Materials</h3>
-        <ul className="guide-list">
-          {guide.recommendedTools?.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-
-        <h3>What to Look Out For</h3>
-        <ul className="guide-list">
-          {guide.whatToLookFor?.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </div>
-    </div>
-    <Footer />
+      </main>
+      <Footer />
     </div>
   );
-};
+}
 
 export default GuideDetails;

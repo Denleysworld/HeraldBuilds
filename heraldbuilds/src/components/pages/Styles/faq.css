@@ -5,18 +5,18 @@
   padding: 2rem;
 }
 
-.hero {
+.faq-header {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.hero h1 {
+.faq-header h1 {
   font-size: 2.25rem;
   margin-bottom: 1rem;
   color: #ffffff;
 }
 
-.hero .subtitle {
+.faq-header .subtitle {
   color: rgb(163, 161, 161);
   font-size: 20px;
   margin-bottom: 20px;
