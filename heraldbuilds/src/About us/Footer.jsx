@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../styles/About_styles.css';
 import { 
   faFacebook, 
   faTwitter, 
