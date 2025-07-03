@@ -1,4 +1,4 @@
-
+import '../styles/About_styles.css';
 import HeroSection from './Hero';
 import OurStory from './OurStory';
 import OurMission from './OurMission';
