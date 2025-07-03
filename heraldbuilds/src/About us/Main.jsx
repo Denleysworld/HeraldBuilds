@@ -6,7 +6,7 @@ import OurValues from './OurValues';
 import OurTeam from './OurTeam';
 import Header from './Header';
 import Footer from './Footer';
-import '../styles/about-styles.css';
+import './styles/about-styles.css';
 
 const About = () => {
   return (

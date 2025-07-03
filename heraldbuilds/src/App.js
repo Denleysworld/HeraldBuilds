@@ -6,6 +6,7 @@ import TroubleshootingPage from './components/pages/TroubleshootingPage';
 import FAQ from './components/pages/FAQ';
 import Home from './components/pages/Home';
 import ToolsPage from './components/pages/ToolsPage';
+import Main from './About us/Main';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/guides" element={<GuidesPage />} />
         <Route path="/guide-details" element={<GuideDetails />} />
         <Route path="/troubleshooting" element={<TroubleshootingPage />} />
+        <Route path="/about" element={<Main/>} />
         <Route path="/tools" element={<ToolsPage />} />
         <Route path="/faq" element={<FAQ/>} />
       </Routes>
