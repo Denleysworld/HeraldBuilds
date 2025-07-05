@@ -125,7 +125,7 @@ header {
 
 .guide-card {
   background-color: #1c2433;
-  padding: 4rem 4rem 4rem 4.5rem; 
+  padding: 4rem 5rem 4rem 5rem; 
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   max-width: 900px;
@@ -349,7 +349,7 @@ header {
 @media (max-width: 900px) {
   .guide-card {
     max-width: 99vw;
-    padding: 1.5rem;
+    padding: 2rem;
   }
   .guide-detail-page {
     padding: 0.5rem;

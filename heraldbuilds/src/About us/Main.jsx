@@ -1,12 +1,12 @@
-import '../styles/About_styles.css';
+import React from 'react';
 import HeroSection from './Hero';
 import OurStory from './OurStory';
 import OurMission from './OurMission';
 import OurValues from './OurValues';
 import OurTeam from './OurTeam';
-import Header from './Header';
-import Footer from './Footer';
-import './styles/about-styles.css';
+import Header from '../components/pages/Header';
+import Footer from '../components/pages/Footer';
+import '../components/pages/Styles/About_styles.css';
 
 const About = () => {
   return (
