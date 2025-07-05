@@ -50,7 +50,7 @@ const FAQ = () => {
       <Header />
       
       <main className="faq-container">
-        <section className="faq-header">
+        <section className="hero">
           <h1>Frequently Asked Questions</h1>
           <p className="subtitle">
             Find answers to common questions about PC building and troubleshooting
