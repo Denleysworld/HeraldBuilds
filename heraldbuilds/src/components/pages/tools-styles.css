@@ -64,7 +64,7 @@ header {
 
 /* Tools Hero Section */
 .tools-hero {
-  background: linear-gradient(rgba(14, 19, 32, 0.8), rgba(14, 19, 32, 0.9)), url('./images/backgrounds/sdl-sanjaya-4gbbKX63V5I-unsplash\ \(1\).webp');
+  background: linear-gradient(rgba(14, 19, 32, 0.8), rgba(14, 19, 32, 0.9)), url('./images/backgrounds/sdl-sanjaya-hero-bg.webp');
   background-size: cover;
   background-position: center;
   padding: 6rem 0;
