@@ -1,16 +1,17 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer>
       <div className="footer-content">
         <div className="footer-section">
           <h3>Quick Links</h3>
-          <a href="/HeraldBuilds/Home/index.html">Home</a>
-          <a href="/HeraldBuilds/Guides/guides.html">PC Guides</a>
-          <a href="/HeraldBuilds/Troubleshooting/troubleshooting.html">
-            Troubleshooting
-          </a>
-          <a href="/HeraldBuilds/About/about.html">About Us</a>
-          <a href="/HeraldBuilds/FAQ/faq.html">FAQ</a>
+          <Link to="/">Home</Link>
+          <Link to="/guides">PC Guides</Link>
+          <Link to="/troubleshooting">Troubleshooting</Link>
+          <Link to="/tools">Tools</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/faq">FAQ</Link>
         </div>
 
         <div className="footer-section">
@@ -31,16 +32,16 @@ export default function Footer() {
             </address>
           </div>
           <div className="social-links">
-            <a href="#" title="Facebook">
+            <a href="#" title="Facebook" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook"></i>
             </a>
-            <a href="#" title="Twitter">
+            <a href="#" title="Twitter" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" title="Instagram">
+            <a href="#" title="Instagram" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" title="YouTube">
+            <a href="#" title="YouTube" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-youtube"></i>
             </a>
           </div>

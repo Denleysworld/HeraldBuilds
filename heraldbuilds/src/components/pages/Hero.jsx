@@ -3,7 +3,7 @@ import heroBackground from './images/backgrounds/images (2).webp';
 
 const Hero = () => {
   const heroStyle = {
-    backgroundImage: `linear-gradient(rgba(14, 19, 32, 0.8), rgba(14, 19, 32, 0.9)), url(${heroBackground})`
+    backgroundImage: `url(${heroBackground})`
   };
 
   return (
