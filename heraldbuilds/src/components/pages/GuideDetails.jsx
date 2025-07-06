@@ -13,6 +13,10 @@ function GuideDetails() {
     if (stored) setGuide(JSON.parse(stored));
   }, []);
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (!guide) {
     return (
       <>
